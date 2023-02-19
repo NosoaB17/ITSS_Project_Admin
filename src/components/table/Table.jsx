@@ -15,8 +15,7 @@ const List = () => {
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png",
       customer: "Ngo Bao Son",
       date: "3 Feb 2023",
-      amount: 300,
-      method: "Cash on Delivery",
+      method: "Paypal",
       status: "Approved",
     },
     {
@@ -25,8 +24,7 @@ const List = () => {
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
       customer: "Tong Huu Tham",
       date: "3 Feb 2023",
-      amount: 200,
-      method: "Online Payment",
+      method: "ATM/VISA",
       status: "Pending",
     },
     {
@@ -35,8 +33,7 @@ const List = () => {
       img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       customer: "Nguyen Trong Tue",
       date: "2 Feb 2023 ",
-      amount: 400,
-      method: "Cash on Delivery",
+      method: "ATM/VISA",
       status: "Pending",
     },
     {
@@ -45,8 +42,7 @@ const List = () => {
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
       customer: "Tran Quang Huy",
       date: "2 Feb 2023",
-      amount: 500,
-      method: "Online",
+      method: "Paypal",
       status: "Approved",
     },
     {
@@ -55,8 +51,7 @@ const List = () => {
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png",
       customer: "Tran Quang Thuong",
       date: "1 Feb 2023",
-      amount: 500,
-      method: "Online",
+      method: "Momo",
       status: "Pending",
     },
   ];
@@ -69,7 +64,6 @@ const List = () => {
             <TableCell className="tableCell">Courses</TableCell>
             <TableCell className="tableCell">Customer</TableCell>
             <TableCell className="tableCell">Date Enroll</TableCell>
-            <TableCell className="tableCell">Price</TableCell>
             <TableCell className="tableCell">Payment Method</TableCell>
             <TableCell className="tableCell">Status</TableCell>
           </TableRow>
@@ -86,7 +80,6 @@ const List = () => {
               </TableCell>
               <TableCell className="tableCell">{row.customer}</TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
               <TableCell className="tableCell">{row.method}</TableCell>
               <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>{row.status}</span>
