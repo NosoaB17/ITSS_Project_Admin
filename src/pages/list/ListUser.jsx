@@ -1,18 +1,18 @@
-import "./list.scss";
+import "./listuser.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import Datatable from "../../components/datatable/Datatable";
+import DatatableUser from "../../components/datatable/DatatableCourse";
 
-const List = () => {
+const ListUser = () => {
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable />
+        <DatatableUser />
       </div>
     </div>
   );
 };
 
-export default List;
+export default ListUser;

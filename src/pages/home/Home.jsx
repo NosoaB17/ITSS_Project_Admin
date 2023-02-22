@@ -1,11 +1,13 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
-import Featured from "../../components/featured/Featured";
 import Table from "../../components/table/Table";
 import "./home.scss";
 
+
 const Home = () => {
+  
+
   return (
     <div className="home">
       <Sidebar />
@@ -15,11 +17,8 @@ const Home = () => {
           <Widget type="user" />
           <Widget type="course" />
         </div>
-        <div className="charts">
-          <Featured />
-        </div>
         <div className="listContainer">
-          <div className="listTitle">Latest Courses Enroll</div>
+          <div className="listTitle">Courses</div>
           <Table />
         </div>
       </div>

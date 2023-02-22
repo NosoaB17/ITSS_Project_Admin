@@ -4,7 +4,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
-
+import { Link } from "react-router-dom";
 const Widget = ({ type }) => {
   let data;
 
@@ -17,7 +17,7 @@ const Widget = ({ type }) => {
       data = {
         title: "USERS",
         isMoney: false,
-        link: "See all users",
+        link: <Link to ="/users">See all users</Link>,
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -33,7 +33,7 @@ const Widget = ({ type }) => {
       data = {
         title: "COURSES",
         isMoney: false,
-        link: "View all courses",
+        link: <Link to="/courses">View all courses</Link>,
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"

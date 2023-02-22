@@ -1,47 +1,3 @@
-export const userInputs = [
-  {
-    id: 1,
-    label: "Username",
-    type: "text",
-    placeholder: "",
-  },
-  {
-    id: 2,
-    label: "Name and surname",
-    type: "text",
-    placeholder: "",
-  },
-  {
-    id: 3,
-    label: "Email",
-    type: "mail",
-    placeholder: "",
-  },
-  {
-    id: 4,
-    label: "Phone",
-    type: "text",
-    placeholder: "",
-  },
-  {
-    id: 5,
-    label: "Password",
-    type: "",
-  },
-  {
-    id: 6,
-    label: "Address",
-    type: "text",
-    placeholder: "",
-  },
-  {
-    id: 7,
-    label: "Country",
-    type: "text",
-    placeholder: "",
-  },
-];
-
 export const productInputs = [
   {
     id: 1,
@@ -61,5 +17,4 @@ export const productInputs = [
     type: "text",
     placeholder: "",
   },
-  
 ];
