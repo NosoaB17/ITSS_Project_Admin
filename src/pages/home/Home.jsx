@@ -1,8 +1,8 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
-import Table from "../../components/table/Table";
 import "./home.scss";
+import DataTableCourses from "../../components/datatable/DatatableCourse";
 
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
         <div className="listContainer">
           <div className="listTitle">Courses</div>
-          <Table />
+          <DataTableCourses />
         </div>
       </div>
     </div>

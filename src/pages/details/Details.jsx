@@ -21,7 +21,8 @@ export default function DetailsCourses() {
 
   const deleteCourses = async (id) => {
     axios
-      .delete(`http://127.0.0.1:8088/api/v1/courses/${id}`, {
+      .delete(`http://127.0.0.1:8088/api/v1/courses/${id}`,
+        {
         headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer " + localStorage.getItem("accessToken"),
