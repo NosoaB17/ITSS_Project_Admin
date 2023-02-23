@@ -5,3 +5,30 @@
     flex: 6;
   }
 }
+
+.listUser {
+  margin-top: 80px;
+}
+
+i {
+  vertical-align: middle;
+}
+.table-users tbody tr:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+.nav-user-photo {
+  vertical-align: middle;
+}
+.user_panel {
+  width: 50%;
+}
+.label {
+  border-radius: 3px;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+.labelActive {
+  color: #145a09;
+}
