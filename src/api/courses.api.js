@@ -28,7 +28,7 @@ export const getCourseById = async (id) => {
 
 export const createCourse = async (request) => {
     try {
-        const response = await axios.post(`${API_URL}`, JSON.stringify(request) , { headers });
+        const response = await axios.post(`${API_URL}`, request , { headers });
         return response.data;
     } catch (err) {
         console.log(err);

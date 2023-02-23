@@ -15,9 +15,6 @@ export const login = async (username, password) => {
             localStorage.setItem("role", response.data.roleName);
         }
 
-        console.log('jsessionid')
-        console.log(response)
-
         alert("Login successful");
 
         return response.data;

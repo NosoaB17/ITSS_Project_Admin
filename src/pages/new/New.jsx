@@ -3,6 +3,9 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Margin } from "@mui/icons-material";
+import { margin } from "@mui/system";
 
 function New() {
   const [name, setName] = useState("");
@@ -91,38 +94,62 @@ function New() {
       <Sidebar />
       <div className="newContainer">
         <Navbar />
-        <div className="newcourses">
+        <div className="newcourses" style={{ marginTop: "100px" }}>
           <header className="header">Add Courses To Website</header>
-          Name : <input value={name} onChange={handleName} type="text" />
-          <br />
-          CategoryId :
-          <input value={categoryId} onChange={handleCategoryId} type="text" />
-          {}
-          <br />
-          Description :
-          <input
-            value={description}
-            onChange={handleDescription}
-            type="text"
-          />{" "}
-          <br />
-          OwnerId :{}
-          <input value={ownerId} onChange={handleOwnerId} type="number" />{" "}
-          <br />
-          Image : <input value={image} onChange={handleImage} type="text" />
-          <br />
-          Students :{}
-          <input value={students} onChange={handleStudents} type="number" />
-          <br />
-          CreatedBy :
-          <input value={createdBy} onChange={handleCreatedBy} type="number" />
-          {}
-          <br />
-          ModifiedBy :
-          <input value={modifiedBy} onChange={handleModifiedBy} type="number" />
-          {}
-          <br />
-          <button onClick={handleApi}>Submit</button>
+          <table>
+            <tr>
+              <td>Name :</td>
+              <td>
+                <input value={name} onChange={handleName} type="text" />
+              </td>
+              <br />
+            </tr>
+            <tr>
+              <td>CategoryId :</td>
+              <td>
+                <input value={categoryId} onChange={handleCategoryId} type="text" />
+              </td>
+              <br />
+            </tr>
+            <tr>
+              <td>Description :</td>
+              <td>
+                <input
+                  value={description}
+                  onChange={handleDescription}
+                  type="text"
+                />
+              </td>
+              <br />
+            </tr>
+            <tr>
+              <td>OwnerId :</td>
+              <td><input value={ownerId} onChange={handleOwnerId} type="number" /></td>
+              <br />
+            </tr>          
+            <tr>
+              <td>Image :</td>
+              <td><input value={image} onChange={handleImage} type="text" /></td>
+              <br />
+            </tr>
+            <tr>
+              <td>Students :</td>
+              <td><input value={students} onChange={handleStudents} type="number" /></td>
+              <br />
+            </tr>
+            <tr>
+              <td>CreatedBy :</td>
+              <td><input value={createdBy} onChange={handleCreatedBy} type="number" /></td>
+              <br />
+            </tr>
+            <tr>
+              <td>ModifiedBy :</td>
+              <td><input value={modifiedBy} onChange={handleModifiedBy} type="number" /></td>
+            </tr>
+          </table>
+          <Link to="/courses" onClick={handleApi}>
+            <button>Submit</button>
+          </Link>
         </div>
       </div>
     </div>
