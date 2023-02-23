@@ -2,8 +2,6 @@ import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import GroupIcon from "@mui/icons-material/Group";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 

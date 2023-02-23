@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-export default function Course() {
+
+export default function Users() {
   const [users, setUsers] = useState([]);
 
   const { id } = useParams();
 
-  useEffect(() => {
-    loadUsers();
-  }, []);
 
-  const loadUsers = async () => {
-    const result = await axios.get("http://127.0.0.1:8088/api/v1/users/filter");
-    setUsers(result.data);
-  };
+  axios
+    .get("http://127.0.0.1:8088/api/v1/users/filter?=", {
+      params: {
+        id: 1,
+      },
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
 
   return (
@@ -53,3 +59,4 @@ export default function Course() {
     </div>
   );
 }
+
