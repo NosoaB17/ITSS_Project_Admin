@@ -35,7 +35,7 @@ const Sidebar = () => {
           <Link to="/courses/new">
             <li>
               <MenuBookIcon className="icon" />
-              <span>Add New Courses</span>
+              <span>Add Courses</span>
             </li>
           </Link>
 
@@ -46,12 +46,6 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
-          <Link to="/:userId">
-            <li>
-              <AccountCircleIcon className="icon" />
-              <span>Profile</span>
-            </li>
-          </Link>
           <Link to="/login">
             <li>
               <SyncAltIcon className="icon" />
@@ -59,10 +53,6 @@ const Sidebar = () => {
             </li>
           </Link>
         </ul>
-      </div>
-      <div className="bottom">
-        <div className="colorOptions"></div>
-        <div className="colorOptions"></div>
       </div>
     </div>
   );

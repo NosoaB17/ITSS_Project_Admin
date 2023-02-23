@@ -1,7 +1,7 @@
 import "./listuser.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import DatatableUser from "../../components/datatable/DatatableCourse";
+import DatatableUser from "../../components/datatable/DatatableUser";
 
 const ListUser = () => {
   return (
