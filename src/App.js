@@ -3,10 +3,10 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import ListUser from "./pages/list/ListUser";
 import ListCourse from "./pages/list/ListCourse";
-import Single from "./pages/single/Single";
+import Details from "./pages/details/Details";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { productInputs } from "./formSource";
+import Profile from "./pages/profile/Profile";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -26,12 +26,12 @@ function App() {
 
             <Route path="users">
               <Route index element={<ListUser />} />
-              <Route path=":userId" element={<Single />} />
+              <Route path=":userId" element={<Profile />} />
             </Route>
 
             <Route path="courses">
               <Route index element={<ListCourse />} />
-              <Route path=":coursesId" element={<Single />} />
+              <Route path="/courses/:id" element={<Details />} />
               <Route path="new" element={<New title="Add New Course" />} />
             </Route>
           </Route>

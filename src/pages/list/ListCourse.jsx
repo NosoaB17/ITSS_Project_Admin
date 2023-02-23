@@ -2,8 +2,6 @@ import "./listcourse.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DatatableCourse from "../../components/datatable/DatatableCourse";
-import Widget from "../../components/widget/Widget";
-import Table from "../../components/table/Table";
 
 const ListCourse = () => {
   return (
@@ -13,8 +11,8 @@ const ListCourse = () => {
         <Navbar />
         <div>
           <h1 className="course">
-          Courses
-          <DatatableCourse />
+            Courses
+            <DatatableCourse />
           </h1>
         </div>
       </div>

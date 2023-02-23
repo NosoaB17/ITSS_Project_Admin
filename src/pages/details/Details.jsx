@@ -1,51 +1,50 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
-export default function ViewUser() {
-  const [user, setUser] = useState({
-    name: "",
-    username: "",
-    email: "",
-  });
+export default function DetailsCourses() {
+  const [courses, setCourses] = useState([]);
 
   const { id } = useParams();
 
   useEffect(() => {
-    loadUser();
+    loadCourses();
   }, []);
 
-  const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
-    setUser(result.data);
+  const loadCourses = async () => {
+    const result = await axios.get(
+      `http://localhost:8088/api/v1/courses/${id}`
+    );
+    console.log(result.data);
+    setCourses(result.data);
   };
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">User Details</h2>
+          <h2 className="text-center m-4">Courses Details</h2>
 
           <div className="card">
             <div className="card-header">
-              Details of user id : {user.id}
+              Details of course number : {courses.id}
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <b>Name:</b>
-                  {user.name}
+                  <b>Name: </b>
+                  {courses.name}
                 </li>
                 <li className="list-group-item">
-                  <b>UserName:</b>
-                  {user.username}
+                  <b>Description:</b>
+                  {courses.description}
                 </li>
                 <li className="list-group-item">
-                  <b>Email:</b>
-                  {user.email}
+                  <b>Date Created:</b>
+                  {courses.created}
                 </li>
               </ul>
             </div>
           </div>
-          <Link className="btn btn-primary my-2" to={"/"}>
+          <Link className="btn btn-primary my-2" to={"/courses"}>
             Back to Home
           </Link>
         </div>
