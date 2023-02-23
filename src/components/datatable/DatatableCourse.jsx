@@ -1,31 +1,51 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
-function CourseFetching() {
+export default function DataTableCourses() {
   const [courses, setCourses] = useState([]);
 
+  const { id } = useParams();
+
   useEffect(() => {
-    axios
-      .get("http://127.0.0.1:8088/api/v1/courses")
-      .then((res) => {
-        console.log(res);
-        setCourses(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    loadCourses();
   }, []);
 
+  const loadCourses = async () => {
+    const result = await axios.get("http://localhost:8088/api/v1/courses");
+    console.log(result.data.courseList);
+    setCourses(result.data.courseList);
+  };
+
+  
+
   return (
-    <div>
-      {courses.length > 0 && (
-        <ul>
-          {courses.map(course => (
-            <li key={course.id}>{course.name}</li>
-          ))}
-        </ul>
-      )}
+    <div className="container">
+      <div className="py-4">
+        <table className="table border shadow">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {courses.map((course) => (
+              <tr key={course.id}>
+                <th scope="row"></th>
+                <td>{course.id}</td>
+                <Link to={`/course/${course.id}`}>
+                {" "}
+                <td>{course.name}</td>{" "}
+                </Link>
+                <td>{course.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
-export default CourseFetching;
