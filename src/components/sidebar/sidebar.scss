@@ -3,6 +3,7 @@
   border-right: 0.5px solid rgb(201, 189, 189);
   min-height: 100vh;
   background-color: white;
+  text-decoration: none;
 
   .top {
     height: 64px;
@@ -11,9 +12,9 @@
     justify-content: center;
 
     .logo {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
-      color: #6439ff;
+      color: #ff0000;
     }
   }
   hr {
@@ -26,11 +27,11 @@
 
     ul {
       list-style: none;
-      margin: 0;
+      margin: 5;
       padding: 0;
 
       .title {
-        font-size: 20px;
+        font-size: 28px;
         font-weight: bold;
         color: #999;
         margin-top: 25px;
@@ -38,48 +39,27 @@
       }
 
       li {
+        text-decoration: none;
         display: flex;
         align-items: center;
         padding: 5px;
         cursor: pointer;
 
         &:hover {
-          background-color: #8a7bc2;
+          background-color: #3406db;
         }
 
         .icon {
-          font-size: 18px;
-          color: rgb(65, 44, 125);
+          font-size: 24px;
+          color: rgb(234, 82, 0);
         }
 
         span {
-          font-size: 25px;
+          font-size: 27px;
           font-weight: bold;
           color: #9892ad;
           margin-left: 10px;
         }
-      }
-    }
-  }
-
-  .bottom {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-
-    .colorOptions {
-      width: 40px;
-      height: 40px;
-      border-radius: 7px;
-      border: 1px solid #7541f8;
-      cursor: pointer;
-      margin: 10px;
-
-      &:nth-child(1) {
-        background-color: whitesmoke;
-      }
-      &:nth-child(2) {
-        background-color: rgb(9, 9, 9);
       }
     }
   }

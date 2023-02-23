@@ -1,15 +1,34 @@
 import "./listcourse.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import DatatableCourse from "../../components/datatable/DatatableCourse";
+// import DatatableCourse from "../../components/datatable/DatatableCourse";
+import Widget from "../../components/widget/Widget";
+import Table from "../../components/table/Table";
 
 const ListCourse = () => {
   return (
-    <div className="list">
+    // <div className="list">
+    //   <Sidebar />
+    //   <div className="listContainer">
+    //     <Navbar />
+    //     <DatatableCourse />
+    //     <div>
+    //       <h1 className="course">Courses</h1>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="home">
       <Sidebar />
-      <div className="listContainer">
+      <div className="homeContainer">
         <Navbar />
-        <DatatableCourse />
+        <div className="widgets">
+          <Widget type="user" />
+          <Widget type="course" />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Courses</div>
+          <Table />
+        </div>
       </div>
     </div>
   );

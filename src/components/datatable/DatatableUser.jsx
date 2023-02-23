@@ -11,14 +11,10 @@ export default function Course() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("");
+    const result = await axios.get("http://127.0.0.1:8088/api/v1/users/filter");
     setUsers(result.data);
   };
 
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8088/user/${id}`);
-    loadUsers();
-  };
 
   return (
     <div className="container">
@@ -39,33 +35,15 @@ export default function Course() {
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
+            {users.map((users, index) => (
               <tr>
                 <th scope="row" key={index}>
                   {index + 1}
                 </th>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
+                <td>{users.name}</td>
+                <td>{users.username}</td>
+                <td>{users.email}</td>
                 <td>
-                  <Link
-                    className="btn btn-primary mx-2"
-                    to={`/viewuser/${user.id}`}
-                  >
-                    View
-                  </Link>
-                  <Link
-                    className="btn btn-outline-primary mx-2"
-                    to={`/edituser/${user.id}`}
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    className="btn btn-danger mx-2"
-                    onClick={() => deleteUser(user.id)}
-                  >
-                    Delete
-                  </button>
                 </td>
               </tr>
             ))}
