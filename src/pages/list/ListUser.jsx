@@ -2,19 +2,24 @@ import "./listuser.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DatatableUser from "../../components/datatable/DatatableUser";
+import Widget from "../../components/widget/Widget";
 
 const ListUser = () => {
   return (
-    <div className="list">
+    <div className="home">
       <Sidebar />
-      <div className="listContainer">
+      <div className="homeContainer">
         <Navbar />
         <DatatableUser />
+        <div className="widgets">
+          <Widget type="user" />
+          <Widget type="course" />
+        </div>
         <div className="listUser">
           <div class="row">
             <div class="panel panel-default user_panel">
               <div class="panel-heading">
-                <h3 class="panel-title">User List</h3>
+                <h3 class="panel-title">USER LIST</h3>
               </div>
               <div class="panel-body">
                 <div class="table-container">
