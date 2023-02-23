@@ -17,6 +17,8 @@ export default function DataTableCourses() {
     setCourses(result.data.courseList);
   };
 
+  
+
   return (
     <div className="container">
       <div className="py-4">
@@ -34,7 +36,10 @@ export default function DataTableCourses() {
               <tr key={course.id}>
                 <th scope="row"></th>
                 <td>{course.id}</td>
-                <td>{course.name}</td>
+                <Link to={`/course/${course.id}`}>
+                {" "}
+                <td>{course.name}</td>{" "}
+                </Link>
                 <td>{course.description}</td>
               </tr>
             ))}

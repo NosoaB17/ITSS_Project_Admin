@@ -9,7 +9,7 @@ function Register() {
   const [name, setName] = useState("");
   const [phonenumber, setPhoneNumber] = useState("");
   const [gender, setGender] = useState();
-  console.log({ username, password, email, name, phonenumber, gender }, );
+  console.log({ username, password, email, name, phonenumber, gender });
   const handleUsername = (e) => {
     setUsername(e.target.value);
   };
