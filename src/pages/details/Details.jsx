@@ -19,6 +19,24 @@ export default function DetailsCourses() {
     setCourses(result.data);
   };
 
+  const deleteCourses = async (id) => {
+    axios
+      .delete(`http://127.0.0.1:8088/api/v1/courses/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + localStorage.getItem("accessToken"),
+        }
+      })
+      .then((result) => {
+        console.log(result.data);
+        alert("Delete courses successfully");
+      })
+      .catch((error) => {
+        alert("Service error");
+        console.log(error);
+      });
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -47,6 +65,12 @@ export default function DetailsCourses() {
           <Link className="btn btn-primary my-2" to={"/courses"}>
             Back to Home
           </Link>
+          <button
+            className="btn btn-danger mx-2"
+            onClick={() => deleteCourses(courses.id)}
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
