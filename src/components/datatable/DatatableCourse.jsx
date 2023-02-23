@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import "./datatable.scss";
 
 export default function DataTableCourses() {
   const [courses, setCourses] = useState([]);

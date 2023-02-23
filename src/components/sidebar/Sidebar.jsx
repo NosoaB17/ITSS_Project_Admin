@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    //<Link to="/">Dashboard</Link>
 
     <div className="sidebar">
       <div className="top">
