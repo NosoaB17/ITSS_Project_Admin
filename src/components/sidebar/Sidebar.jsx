@@ -13,19 +13,18 @@ const Sidebar = () => {
 
     <div className="sidebar">
       <div className="top">
-        <span className="logo">ITCO HUST</span>
+        <span className="logo">ITSS HUST</span>
       </div>
       <hr />
       <div className="center">
         <ul>
-          <p className="title">HOME PAGE</p>
           <Link to="/">
             <li>
               <DashboardIcon className="icon" />
               <span>Dashboard</span>
             </li>
           </Link>
-          <p className="title">COURSES</p>
+
           <Link to="/courses">
             <li>
               <MenuBookIcon className="icon" />
@@ -39,7 +38,6 @@ const Sidebar = () => {
             </li>
           </Link>
 
-          <p className="title">USERS</p>
           <Link to="/users">
             <li>
               <GroupIcon className="icon" />
