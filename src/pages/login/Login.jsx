@@ -1,6 +1,6 @@
 import "./login.scss";
-
 import React, { useState } from "react";
+import { login, logout } from "../../api/auth.api";
 
 function Login() {
   // React States
@@ -24,27 +24,32 @@ function Login() {
     pass: "invalid password",
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+    // Get form data
+    const { uname, pass } = document.forms[0];
+    console.log(uname.value, pass.value);
+    login(uname.value, pass.value);
 
-    // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    // var { uname, pass } = document.forms[0];
 
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
-    }
+    // // Find user login info
+    // const userData = database.find((user) => user.username === uname.value);
+
+    // // Compare user info
+    // if (userData) {
+    //   if (userData.password !== pass.value) {
+    //     // Invalid password
+    //     setErrorMessages({ name: "pass", message: errors.pass });
+    //   } else {
+    //     setIsSubmitted(true);
+    //   }
+    // } else {
+    //   // Username not found
+    //   setErrorMessages({ name: "uname", message: errors.uname });
+    // }
   };
 
   // Generate JSX code for error message
