@@ -70,6 +70,11 @@ function New() {
         students: students,
         createdBy: createdBy,
         modifiedBy: modifiedBy,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + localStorage.getItem("accessToken"),
+        }
       })
       .then((result) => {
         console.log(result.data);

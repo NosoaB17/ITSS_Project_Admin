@@ -11,9 +11,12 @@ export const login = async (username, password) => {
 
         if (response.data.accessToken) {
             localStorage.setItem("user", JSON.stringify(response.data));
-            localStorage.setItem("token", response.data.accessToken);
+            localStorage.setItem("accessToken", response.data.accessToken);
             localStorage.setItem("role", response.data.roleName);
         }
+
+        console.log('jsessionid')
+        console.log(response)
 
         alert("Login successful");
 
@@ -29,7 +32,7 @@ export const logout = async() => {
         const response = await axios.post(`${API_URL}/logout`);
 
         localStorage.removeItem("user");
-        localStorage.removeItem("token");
+        localStorage.removeItem("accessToken");
         localStorage.removeItem("role");
     } catch (err) {
         console.log(err);
